@@ -14,15 +14,15 @@ call .venv\Scripts\activate.bat
 ::-- Upgrade pip at virtual environment
 python -m pip install --upgrade pip
 
-::-- Install requirements at virtual environment
+::-- Install requirements at virtual environment(In this project both are same)
 if "%majorVersion%"=="2" (
-  pip install -r requirements2x.txt
+  pip install -r requirements.txt
 ) else (
   pip install -r requirements.txt
 )
 
 ::-- Run main program at virtual environment
-python main.py
+python corona_notify.py
 
 ::-- Deactivate virtual environment
 call .venv\Scripts\deactivate.bat
